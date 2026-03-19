@@ -1,0 +1,26 @@
+{
+  "name": "keen-skills-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to download and manage keen skills",
+  "main": "index.js",
+  "bin": {
+    "keen-skills": "bin/keen-skills.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish"
+  },
+  "keywords": [
+    "keen",
+    "skills",
+    "cli",
+    "download"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.0",
+    "chalk": "^4.1.0"
+  }
+}
