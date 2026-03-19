@@ -2,121 +2,121 @@
 
 A CLI tool to download and manage keen skills from remote sources.
 
-## Features
+## 功能 Features
 
-- Download skills from remote sources (GitHub, CDN, etc.) to your desktop
-- List available skills
-- Easy-to-use command-line interface
-- Publish skills to npm for easy distribution
+- 从远程源（GitHub、CDN 等）下载技能到桌面 - Download skills from remote sources (GitHub, CDN, etc.) to your desktop
+- 列出可用技能 - List available skills
+- 易于使用的命令行界面 - Easy-to-use command-line interface
+- 发布技能到 npm 以便轻松分发 - Publish skills to npm for easy distribution
 
-## Installation
+## 安装 Installation
 
-### From npm
+### 从 npm
 
 ```bash
 npm install -g keen-skills-cli
 ```
 
-### From Source
+### 从源代码
 
-1. Clone the repository:
+1. 克隆仓库：
    ```bash
    git clone <repository-url>
    cd keen-skills-cli
    ```
 
-2. Install dependencies:
+2. 安装依赖：
    ```bash
    npm install
    ```
 
-3. Link the CLI tool:
+3. 链接 CLI 工具：
    ```bash
    npm link
    ```
 
-## Usage
+## 使用 Usage
 
-### Download a skill
+### 下载技能
 
 ```bash
 keen-skills download <skill-name>
 ```
 
-**Options:**
-- `-o, --output <path>`: Specify output directory (default: Desktop)
+**选项：**
+- `-o, --output <path>`: 指定输出目录（默认：桌面）
 
-**Example:**
+**示例：**
 ```bash
 keen-skills download conversation-manager
 ```
 
-### Install a skill
+### 安装技能
 
 ```bash
 keen-skills install <skill-name>
 ```
 
-**Options:**
-- `-o, --output <path>`: Specify output directory (default: Desktop)
+**选项：**
+- `-o, --output <path>`: 指定输出目录（默认：桌面）
 
-**Example:**
+**示例：**
 ```bash
 keen-skills install conversation-manager
 ```
 
-### List available skills
+### 列出可用技能
 
 ```bash
 keen-skills list
 ```
 
-### Show help
+### 显示帮助
 
 ```bash
 keen-skills help
 ```
 
-## Available Skills
+## 可用技能 Available Skills
 
 - **conversation-manager**: 会话压缩、分主题记忆、混合检索
 - **question-optimizer**: 问题优化
 
-## Development
+## 开发 Development
 
-### Project Structure
+### 项目结构 Project Structure
 
 ```
 keen-skills-cli/
-├── bin/                # CLI entry point
-│   └── keen-skills.js  # Main CLI script
-├── lib/                # Core functionality
-│   └── download.js     # Download logic
-├── package.json        # Package configuration
-└── README.md           # Documentation
+├── bin/                # CLI 入口点
+│   └── keen-skills.js  # 主 CLI 脚本
+├── lib/                # 核心功能
+│   └── download.js     # 下载逻辑
+├── package.json        # 包配置
+└── README.md           # 文档
 ```
 
-### Publishing to npm
+### 发布到 npm
 
-1. Update the version in `package.json`
-2. Run the publish script:
+1. 更新 `package.json` 中的版本
+2. 运行发布脚本：
    ```bash
    npm run publish
    ```
 
-### Adding New Skills
+### 添加新技能
 
-1. Add the skill to the `.trae/skills` directory in the project root
-2. Update the `listSkills` function in `lib/download.js` to include the new skill
-3. Publish the updated CLI tool to npm
+1. 在项目根目录的 `.keen/skills` 目录中添加技能
+2. 更新 `lib/download.js` 中的 `listSkills` 函数以包含新技能
+3. 将更新后的 CLI 工具发布到 npm
 
-### Remote Source Configuration
+### 远程源配置
 
-By default, the CLI tool uses a simulated remote source. To use a real remote source:
+默认情况下，CLI 工具使用本地技能源。要使用真实的远程源：
 
-1. Update the `SKILLS_REMOTE_URL` in `lib/download.js` to point to your actual remote source
-2. Implement the remote download logic in the `downloadSkill` function
+1. 更新 `lib/download.js` 中的 `LOCAL_SKILLS_DIR` 以指向你的实际远程源
+2. 在 `downloadSkill` 函数中实现远程下载逻辑
 
-## License
+## 许可证 License
 
 MIT
